@@ -1,0 +1,491 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* 
+    Nguyên tắc làm việc logic
+    1. Làm từ ngoài vào trong
+    2. Làm từ trên xuống dưới
+    3. Làm từ tổng thể đến chi tiết
+ */
+/* 
+    Nguyên tắc đặt câu hỏi
+    1. Vị trí
+    2. Kích thước ( width, height )
+    3. Màu sắc
+    4. Kiểu dáng ( kiểu chữ, hình tròn, .... )
+ */
+#main {
+
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* làm cho header khi lăn chuột xuống k bị slider chèn mất */
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav .subnav {
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav li:hover .subnav  {
+    display: block;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav > li:hover > button,
+#nav .subnav li:hover button {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    min-width: 240px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#nav .subnav button {
+    font-size: 16px;
+    background-color: #fff;
+    opacity: 1;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+#nav .subnav a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .search-icon {
+    color: #fff;
+    font-size: 18px;
+    line-height: 46px;
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/slider/slider1.jpg') top center / cover no-repeat;
+
+
+}
+
+#slider .text-content {
+    position: absolute;
+    /* Tổ hợp cho chữ chuyển màu :  */
+    /* background: linear-gradient(to right, #52b788, #3a86ff );
+    color: transparent; /* chữ trong suốt */
+    /* -webkit-background-clip: text; */
+    color: #fff;
+    /* cách 1 căn giữa */
+    /* left: 50%;
+    transform: translateX(-50%); */
+    /* cách 2 căn giữa */
+    /* right: 0; */
+    /* left: 0; */
+    width: 100%; /* cách 3 : */
+    bottom: 0;
+    text-align: center;
+    /* text-shadow : x y blur color */
+    /* box-shadow : x y blur scale color */
+    text-shadow: 2px 4px 6px #000;
+}
+#slider .text-heading {
+    font-weight: 700;
+    font-size: 32px;
+
+}
+#slider .text-description {
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+
+}
+
+#content {
+    /* height: 5000px; */
+    /* background: #fff; */
+
+}
+
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-style: italic; /* kiểu chữ nghiêng */
+    opacity: 0.8; /* độ trong suốt từ ( 0 đến 1 ) */
+}
+
+#content .about-text {
+    font-size: 15px;
+    text-align: justify; /* căn đều hai bên */
+    line-height: 1.6; /* để 1.6 cho tiếng việt cho dễ nhìn */
+    color: #063f5c;
+}
+
+#content .holoMyth_members {
+    display: flex;
+    justify-content: space-around;
+    padding: 70px 0;
+}
+
+#content .member-item {
+}
+
+#content .member-name {
+    color: #063f5c;
+    font-size: 15px;
+    text-align: center;
+}
+
+#content .member-avatar {
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
+
+#content .holoMyth_about {
+    margin: 160px 0px;
+}
+
+.holoMyth_about .container {
+    display: table;
+    width: 1100px;
+    height: 546px;
+    margin: 0 188px;
+}
+
+.holoMyth_about .container-right {
+    display: table-cell;
+    width: 46%;
+    vertical-align: top;
+    color: #063f5c;
+    z-index: 1;
+}
+
+.holoMyth_about .container-right .bg-box {
+    background-color: rgba(255,255,255,0.9);
+    padding: 60px;
+    z-index: -2;
+    text-align: center;
+}
+
+.holoMyth_about .container-right .bg-box h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.3em;
+    margin-bottom: 30px;
+}
+
+.holoMyth_about .container-right .bg-box h1 span {
+    display: block;
+    font-size: 0.25em;
+    line-height: 1em;
+}
+
+.holoMyth_about .container-right .bg-box p {
+    text-align: justify;
+}
+
+.holoMyth_about .container-right .bg-box .txt {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.6em;
+}
+
+.holoMyth_about .container-right ul {
+    list-style: none;
+}
+
+.holoMyth_about .container-right .bg-box .social {
+    margin-top: 24px;
+}
+
+.holoMyth_about li {
+    float: left;
+    display: inline-block;
+} 
+
+.holoMyth_about .container-right .bg-box .social li {
+    width: 48%;
+    margin-right: 2%;
+    border: 1px solid #063f5c;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.holoMyth_about .container-right .bg-box .social li a {
+    font-family: 'Barlow', sans-serif;
+    color: #063f5c;
+    padding: 4px 0;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+}
+
+.holoMyth_about .container-right .bg-box .social li:hover a {
+    color: #fff;
+    background-color: #063f5c;
+}
+
+.holoMyth_about .container-right .holive-english-logo {
+    margin-top: 110px;
+}
+
+.holoMyth_about .container-right .holive-english-logo img {
+    width: 200px;
+}
+
+#content .background-video {
+    position: relative;
+    margin-top: 100px;
+    background-image:  url('/assets/img/bg-video/bg_green.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 20%;
+}
+
+#content .background-video .heading-video {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: left;
+    margin-bottom: 650px;
+    margin-left: 200px;
+}
+
+.background-video .tit {
+    color: #063f5c;
+    font-size: 74px;
+    font-weight: 550;
+    letter-spacing: 10px;
+}
+
+.background-video .videos {
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.videos .video-body {
+    width: min-content;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.video-body .video-tit {
+    margin-top: 8px;
+}
+
+.video-body .video-cate {
+    margin-top: 12px;
+    display: inline-block;
+    color: #063f5c;
+    border: 1px solid #063f5c;
+    border-radius: 50px;
+
+}
+
+.video-body .video-desc {
+    margin-top: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+#footer {
+
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.5s;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header.modal-header {
+    background: #65afd4;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-heading-icon {
+    margin-left: 16px;
+}
+
+.modal-close:hover {
+    color: #000;
+    background: #fff;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 6px 12px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+#donate:hover {
+    opacity: 0.9;
+}
+
+#donate {
+    background: #65afd4;
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.modal-help {
+    padding: 16px;
+    text-align: right;
+}
+
+.modal-help a {
+    color: #2196f3;
+}
